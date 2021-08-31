@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  Constraintlayout is used maily for 2 reasons
+      1. To align Cancel and Save buttons at the bottom of the screen
+      2. To align Cancel and Save buttons at the center of the screen
+      with equal distance, without adding any weights
+      -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fragment_padding"
+        tools:context=".screens.ShoeDetailFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+        <TextView
+            android:id="@+id/tv_shoe_name"
+            style="@style/text_primary"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="@string/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_shoe_name"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_name" />
+
+        <TextView
+            android:id="@+id/tv_shoe_company"
+            style="@style/text_primary"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="@string/company"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_shoe_name" />
+
+        <EditText
+            android:id="@+id/et_shoe_company"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_company" />
+
+        <TextView
+            android:id="@+id/tv_shoe_size"
+            style="@style/text_primary"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="@string/size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_shoe_company" />
+
+        <EditText
+            android:id="@+id/et_shoe_size"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:maxLength="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_size" />
+
+        <TextView
+            android:id="@+id/tv_shoe_description"
+            style="@style/text_primary"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="@string/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_shoe_size" />
+
+        <EditText
+            android:id="@+id/et_shoe_description"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLength="500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_description" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/button_accent"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gd_center" />
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/button_primary"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gd_center" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

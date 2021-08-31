@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="login">Login</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="new_login">New Login</string>
+    <string name="login_with_existing_account">Login with existing account</string>
+    <string name="instructions">Instructions</string>
+    <string name="introduction_text">We pride ourselves on conveying hard-to-discover styles, sizes and widths since we realize that each individual’s needs contrast. Regardless of whether you’re experiencing issues looking over our vast determination of different shoes or you have a straightforward inquiry, our client benefit group is prepared and willing to help. </string>
+    <string name="greetings">Greetings</string>
+    <string name="foot_measurement_guide">Foot Measurement Instructions</string>
+    <string name="foot_measurement_steps">
+        Step 1: Trace Foot. Place a piece of paper on the ground.
+        \n\nStep 2: Measure Length. Use a measuring tape, measure the outline from the back/central part of the heel to the end of the longest toe.
+        \n\nStep 3: Measure Width.
+        \n\nStep 4: Find your Perfect Fit.
+    </string>
+    <string name="view_store">View store</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="description">Description</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+    <string name="name">Name</string>
+    <string name="please_enter">Please enter</string>
+    <string name="add_new_shoe">Add new shoe</string>
+    <string name="shoes_list">Shoes list</string>
+    <string name="how_to_measure">How to measure</string>
+    <string name="welcome">Welcome !</string>
+    <string name="logout">Logout</string>
+</resources>

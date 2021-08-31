@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/shoe_item_padding">
+
+        <ImageView
+            android:id="@+id/iv_shoe_thumbnail"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/shoe_1_1" />
+
+        <TextView
+            android:id="@+id/tv_company"
+            style="@style/text_heading"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="10dp"
+            android:gravity="start|center_vertical"
+            tools:text="Zara men" />
+
+        <TextView
+            android:id="@+id/tv_size"
+            style="@style/text_accent"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:gravity="start|center_vertical"
+            tools:text="size: 7.5" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/text_primary_dark"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:ellipsize="end"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            tools:text="Joggers" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/text_primary"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:ellipsize="end"
+            android:gravity="start|center_vertical"
+            android:maxLines="1"
+            tools:text="Joggers Joggers Joggers Joggers Joggers Joggers" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary_fade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+    </LinearLayout>
+
+</layout>
