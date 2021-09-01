@@ -58,7 +58,7 @@ class ShoeListFragment : Fragment() {
 
         val callback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-
+                requireActivity().openOptionsMenu()
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback);
