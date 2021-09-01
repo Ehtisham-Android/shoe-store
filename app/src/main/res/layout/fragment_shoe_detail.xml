@@ -3,11 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!--  Constraintlayout is used maily for 2 reasons
+    <!--  Constraintlayout is used mainly for 2 reasons
       1. To align Cancel and Save buttons at the bottom of the screen
       2. To align Cancel and Save buttons at the center of the screen
       with equal distance, without adding any weights
       -->
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.screens.shoelist.ShoeListViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -33,6 +41,7 @@
 
         <EditText
             android:id="@+id/et_shoe_name"
+            textChangedListener="@{viewModel.shoeNameTextWatcher}"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:imeOptions="actionNext"
@@ -54,6 +63,7 @@
 
         <EditText
             android:id="@+id/et_shoe_company"
+            textChangedListener="@{viewModel.shoeCompanyTextWatcher}"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:imeOptions="actionNext"
@@ -75,6 +85,7 @@
 
         <EditText
             android:id="@+id/et_shoe_size"
+            textChangedListener="@{viewModel.shoeSizeTextWatcher}"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:imeOptions="actionNext"
@@ -96,6 +107,7 @@
 
         <EditText
             android:id="@+id/et_shoe_description"
+            textChangedListener="@{viewModel.shoeDescriptionTextWatcher}"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:imeOptions="actionDone"
@@ -111,6 +123,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginEnd="10dp"
+            android:onClick="@{()->viewModel.goBackToListScreen()}"
             android:text="@string/cancel"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/gd_center" />
@@ -121,6 +134,8 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
+            android:enabled="@{viewModel.saveButtonEnable}"
+            android:onClick="@{()->viewModel.addShoe()}"
             android:text="@string/save"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/gd_center" />
